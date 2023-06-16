@@ -70,6 +70,8 @@ html {
 // ------------------------------------------------------------------------------------ Navbar Styling ------------------------------------------------------------------------------------
 .navbar{
     background:transparent;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    backdrop-filter: blur(5px);
 }
 
 .logo{
@@ -153,19 +155,23 @@ html {
 // ------------------------------------------------------------------------------------ Page - 2 Styling ------------------------------------------------------------------------------------
 .sec-2{
   .main-wrapper-sec-2{
-    width: 80%;
+    width: 100%;
   }
 }
 
 
 .left-wrapper{
-  width: 50vw;
+  width: 100%;
+  margin-right: 5px;
 .square {
   position: relative;
   width: 23vw;
   height: calc(0.3rem + 3vw + 55vh) ;
-  left: 9vw;
+  float: right;
   border: solid #D9A493 2px;
+  background:transparent;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  backdrop-filter: blur(10px);
   .left-main-text-wrapper{
       
     .square-text-wrapper-top{
@@ -209,9 +215,11 @@ html {
   }
 }
 }
+
 .right-wrapper{
   position: relative;
   height: 100%;
+  margin-left: 5px;
   .right-text-wrapper{
     font-size: $heading3;
     text-align: left;
@@ -234,43 +242,60 @@ html {
   }
 }
 
-.left-sec-3{
-  width: 50vw;
-  .left-sec-3-wrapper{
-    width: 70%;
-    .square-above-text{
-      position: relative;
-      top: 10vh;
-      z-index: 2;
-      font-size: $heading2;
-      text-align: left;
-      color: white;
+
+// ------------------------------------------------------------------------------------ Page - 3 Styling ------------------------------------------------------------------------------------
+.main-wrapper-sec-3{
+  width: 100vw;
+  .left-sec-3{
+    
+    .left-sec-3-wrapper{
+      width: 70%;
+      float: right;
+      .left-sec-3-square {
+        position: relative;
+        padding-left: 5%;
+        padding-right: 5%;
+        top:10vh;
+        width: 20vw;
+        height: calc(0.3rem + 3vw + 55vh) ;
+        background-color: #D9A493;
+        opacity: 0.8;
+        color: white;
+        text-align: left;
+        .square-above-text{
+          position: relative;
+          z-index: 2;
+          font-size: $heading2;
+          
+          line-height: 1.3;
+          transform: translate(0, -50%);
+        }
+        .sec-3-square-title{
+          font-size: $body;
+          letter-spacing: 2px;
+          font-weight: 500;
+          padding-top: 2px;
+        }
+        .sec-3-square-description{
+          font-size: $description;
+        }
+      }
     }
-    .left-sec-3-square {
-      position: relative;
-      width: 23vw;
-      height: calc(0.3rem + 3vw + 55vh) ;
-      background-color: #D9A493;
-      opacity: 0.8;
-  
-    }
+    
   }
-  
-
+  .right-sec-3{
+  }
 }
-
-.right-sec-3{
-  width: 50vw;
-  background-color: blue;
-}
-
+// ------------------------------------------------------------------------------------ Media Query ------------------------------------------------------------------------------------
 @media (max-width: 700px) { 
- 
+  .section{
+    height: 20px !important;
+  }
   .square{
     position: relative;
-    width: 25vw !important;
+    width: 34vw !important;
     top:0;
-    height: 50vh !important;
+    height: 32vh !important;
   }
 }
 
