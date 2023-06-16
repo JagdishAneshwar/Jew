@@ -227,38 +227,58 @@ html {
 
 .main-wrapper-sec-3 {
   width: 100vw;
+  height: 100vh;
 }
 .main-wrapper-sec-3 .left-sec-3 .left-sec-3-wrapper {
+  position: relative;
   width: 70%;
   float: right;
 }
-.main-wrapper-sec-3 .left-sec-3 .left-sec-3-wrapper .left-sec-3-square {
-  position: relative;
+.main-wrapper-sec-3 .left-sec-3 .left-sec-3-wrapper .sec-3-square-description {
+  width: 25vw;
+  height: calc(0.3rem + 3vw + 55vh);
+  position: absolute;
+  font-size: calc(0.6rem + 0.6vw);
+  color: white;
+  text-align: left;
+  z-index: 2 !important;
+  font-size: calc(0.6rem + 0.6vw);
   padding-left: 5%;
   padding-right: 5%;
-  top: 10vh;
-  width: 20vw;
+  letter-spacing: 1px;
+}
+.main-wrapper-sec-3 .left-sec-3 .left-sec-3-wrapper .sec-3-square-description .square-above-text {
+  z-index: 2 !important;
+  font-size: calc(0.7rem + 2vw + 2vh);
+  line-height: 1.3;
+  color: white;
+  text-align: left;
+}
+.main-wrapper-sec-3 .left-sec-3 .left-sec-3-wrapper .sec-3-square-description .sec-3-square-title {
+  font-size: calc(0.5rem + 0.5vw + 0.5vh);
+  letter-spacing: 2px;
+  font-weight: 500;
+  padding-top: 2px;
+  color: white;
+  text-align: left;
+  z-index: 2 !important;
+}
+.main-wrapper-sec-3 .left-sec-3 .left-sec-3-wrapper .sec-3-square-description .sec-3-square-footer {
+  font-weight: 600;
+}
+.main-wrapper-sec-3 .left-sec-3 .left-sec-3-wrapper .sec-3-square-description #line-sec-3 {
+  border-bottom: 1px solid white;
+  top: 50%;
+  bottom: 0;
+}
+.main-wrapper-sec-3 .left-sec-3 .left-sec-3-wrapper .left-sec-3-square {
+  width: 25vw;
   height: calc(0.3rem + 3vw + 55vh);
   background-color: #D9A493;
   opacity: 0.8;
   color: white;
   text-align: left;
-}
-.main-wrapper-sec-3 .left-sec-3 .left-sec-3-wrapper .left-sec-3-square .square-above-text {
-  position: relative;
-  z-index: 2;
-  font-size: calc(0.7rem + 2vw + 2vh);
-  line-height: 1.3;
-  transform: translate(0, -50%);
-}
-.main-wrapper-sec-3 .left-sec-3 .left-sec-3-wrapper .left-sec-3-square .sec-3-square-title {
-  font-size: calc(0.5rem + 0.5vw + 0.5vh);
-  letter-spacing: 2px;
-  font-weight: 500;
-  padding-top: 2px;
-}
-.main-wrapper-sec-3 .left-sec-3 .left-sec-3-wrapper .left-sec-3-square .sec-3-square-description {
-  font-size: calc(0.6rem + 0.6vw);
+  z-index: 0 !important;
 }
 @media (max-width: 700px) {
   .section {
