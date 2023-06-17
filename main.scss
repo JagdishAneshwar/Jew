@@ -16,7 +16,10 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-
+.root-wrapper{
+  width: 100vw;
+  height: 100vh;
+}
 .section{
   width: 100%;
   height: 100vh;
@@ -70,10 +73,12 @@ html {
 // ------------------------------------------------------------------------------------ Navbar Styling ------------------------------------------------------------------------------------
 .navbar{
     background:transparent;
-    background-color: hsla(0, 0%, 100%, 0.2);
+    //background-color: hsla(0, 0%, 100%, 0.2);
     backdrop-filter: blur(5px);
 }
-
+#navbarNav{
+  padding-left: 8rem;
+}
 .logo{
     display: flex;
     justify-content: center;
@@ -106,7 +111,8 @@ html {
 }
 .menu2 li a:hover {
     font-weight: 700;
-    color: coral;
+    color: black;
+    padding: 10px;
   }
 
 .menu2 li a:after {
@@ -171,7 +177,7 @@ html {
   border: solid #D9A493 2px;
   background:transparent;
   background-color: hsla(0, 0%, 100%, 0.2);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   .left-main-text-wrapper{
       
     .square-text-wrapper-top{
@@ -248,14 +254,15 @@ html {
   width: 100vw;
   height: 100vh;
   .left-sec-3{
-    
+    position: relative;
+    float: left;
+    width: 50vw;
+    top: 20vh;
     .left-sec-3-wrapper{
       position: relative;
-      width: 70%;
       float: right;
-
+      transform: translate(-30%, -10%);
       .sec-3-square-description{
-        width: 25vw;
         height: calc(0.3rem + 3vw + 55vh) ;
         position: absolute;
         font-size: $description;
@@ -266,7 +273,7 @@ html {
         padding-left: 5%;
         padding-right: 5%;
         letter-spacing: 1px;
-
+        transform: translate(0%, -15%);
         .square-above-text{
           z-index: 2 !important;
           font-size: $heading2;
@@ -284,7 +291,7 @@ html {
           z-index: 2 !important;
         }
         .sec-3-square-footer{
-          font-weight: 600;
+          font-weight: 500;
         }
         #line-sec-3{
           border-bottom: 1px solid white;
@@ -293,20 +300,82 @@ html {
         }
       } 
       .left-sec-3-square {
+        height: calc(0.3rem + 3vw + 55vh) ;
         width: 25vw;
+        background-color: #D9A493;
+        opacity: 0.8;
+        color: white;
+        text-align: left;
+        z-index: 0 !important;
+        position: relative;
+        top: 10px;
+      }
+    }
+    
+  }
+  .right-sec-3{
+    position: relative;
+
+    float: left;
+    width: 50vw;
+    .right-sec-3-wrapper{
+      position: relative;
+      width: 45%;
+      float: left;
+      top: 20vh;
+      transform: translate(20vw, 5%);
+      .sec-3-square-description{
+        height: calc(0.3rem + 3vw + 55vh) ;
+        position: absolute;
+        font-size: $description;
+        color: white;
+        text-align: left;
+        z-index: 2 !important;
+        font-size: $description;
+        padding-left: 5%;
+        padding-right: 5%;
+        transform: translate(0%, -15%);
+        .square-above-text{
+          position: relative;
+          font-size: $heading2;
+          line-height: 1.3;
+          color: white;
+          text-align: left;
+        }
+        .sec-3-square-title{
+          font-size: $body;
+          letter-spacing: 2px;
+          font-weight: 500;
+          padding-top: 2px;
+          color: white;
+          text-align: left;
+          z-index: 2 !important;
+        }
+        .sec-3-square-footer{
+          font-weight: 500;
+        }
+        #line-sec-3{
+          border-bottom: 1px solid white;
+          top: 50%;
+          bottom: 0;
+        }
+      } 
+      .right-sec-3-square {
         height: calc(0.3rem + 3vw + 55vh) ;
         background-color: #D9A493;
         opacity: 0.8;
         color: white;
         text-align: left;
         z-index: 0 !important;
+        position: relative;
+        top: 10px;
       }
     }
     
   }
-  .right-sec-3{
-  }
 }
+
+
 // ------------------------------------------------------------------------------------ Media Query ------------------------------------------------------------------------------------
 @media (max-width: 700px) { 
   .section{
@@ -317,6 +386,27 @@ html {
     width: 34vw !important;
     top:0;
     height: 32vh !important;
+  }
+  .left-sec-3-wrapper{
+    display:flex;
+    justify-content:flex-start; 
+    flex-direction: column;
+  }
+
+}
+@media (max-width: 800px) { 
+  .main-wrapper-sec-3{
+    width: 100vw;
+    height: auto !important;
+  }
+  .left-sec-3{
+    float:left; 
+    width: 100vw !important;
+  }
+  .right-sec-3{
+    float:left; 
+    clear: left;
+    width: 100vw !important;
   }
 }
 
